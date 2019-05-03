@@ -4,13 +4,26 @@
       <v-flex>
         <v-layout row>
           <v-flex xs3>
-            <v-btn large block depressed class="error--text" @click="reset">
+            <v-btn
+              id="control-reset"
+              large
+              block
+              depressed
+              class="error--text"
+              @click="reset"
+            >
               C
             </v-btn>
           </v-flex>
 
           <v-flex xs3>
-            <v-btn large block depressed @click="removeLastValue">
+            <v-btn
+              id="control-delete"
+              large
+              block
+              depressed
+              @click="removeLastValue"
+            >
               <v-icon>backspace</v-icon>
             </v-btn>
           </v-flex>
@@ -45,7 +58,15 @@
           </v-flex>
 
           <v-flex xs6>
-            <control-button value="=" @click.native="finish()" />
+            <v-btn
+              id="control-finish"
+              class="primary--text"
+              large
+              block
+              depressed
+              @click="finish"
+              >=</v-btn
+            >
           </v-flex>
         </v-layout>
       </v-flex>

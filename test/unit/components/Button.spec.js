@@ -8,6 +8,14 @@ describe('Components: Button.vue', () => {
     Vue.use(Vuetify)
   })
 
+  test('Append correct value to the button', () => {
+    const wrapper = mount(Button, {
+      propsData: { value: 4 }
+    })
+
+    expect(wrapper.find('.v-btn > div').text()).toBe('4')
+  })
+
   test('Operator button has "primary--text" class', () => {
     const operators = ['=', '%', '/', '*', '-', '+']
     const mountButton = operator => {
@@ -25,11 +33,11 @@ describe('Components: Button.vue', () => {
   })
 
   test('Non operator button does not have "primary--text" class', () => {
-    const operators = [1, 2, 'a']
-    const mountButton = operator => {
+    const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const mountButton = number => {
       const wrapper = mount(Button, {
         propsData: {
-          value: operator
+          value: number
         }
       })
       const button = wrapper.find('button')
@@ -37,6 +45,16 @@ describe('Components: Button.vue', () => {
       expect(button.classes()).not.toContain('primary--text')
     }
 
-    operators.map(operator => mountButton(operator))
+    numbers.map(number => mountButton(number))
+  })
+
+  test('It has "token" class', () => {
+    const wrapper = mount(Button, {
+      propsData: {
+        value: 1
+      }
+    })
+
+    expect(wrapper.classes()).toContain('token')
   })
 })

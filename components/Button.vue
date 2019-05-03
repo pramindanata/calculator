@@ -15,6 +15,7 @@ export default {
   computed: {
     classObject() {
       return {
+        token: true,
         'primary--text': isOperator(this.value)
       }
     }
