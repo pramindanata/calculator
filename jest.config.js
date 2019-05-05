@@ -15,5 +15,6 @@ module.exports = {
     '<rootDir>/pages/**/*.vue',
     '<rootDir>/store/**/*.js',
     '<rootDir>/utils/*.js'
-  ]
+  ],
+  testRegex: 'test/unit/.*\\.(js|jsx)$'
 }

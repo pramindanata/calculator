@@ -1,5 +1,7 @@
 <template>
-  <v-btn :class="classObject" large block depressed>{{ value }}</v-btn>
+  <v-btn :class="classObject" large block depressed :data-value="value">{{
+    value
+  }}</v-btn>
 </template>
 
 <script>

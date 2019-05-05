@@ -29,11 +29,19 @@
           </v-flex>
 
           <v-flex xs3>
-            <control-button value="%" @click.native="insert('%')" />
+            <control-button
+              data-value="%"
+              value="%"
+              @click.native="insert('%')"
+            />
           </v-flex>
 
           <v-flex xs3>
-            <control-button value="/" @click.native="insert('/')" />
+            <control-button
+              data-value="/"
+              value="/"
+              @click.native="insert('/')"
+            />
           </v-flex>
         </v-layout>
       </v-flex>

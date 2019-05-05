@@ -5,6 +5,13 @@ export default {
   mode: 'universal',
 
   /*
+   ** Env of the app
+   */
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
+
+  /*
    ** Headers of the page
    */
   head: {
