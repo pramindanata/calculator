@@ -20,3 +20,13 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Testing
+
+``` bash
+# Unit testing
+$ npm run test-unit
+
+# E2E testing
+$ npm run test-e2e
+```
